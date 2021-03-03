@@ -6,13 +6,20 @@
 // getting called in React 17:
 // https://github.com/kentcdodds/react-hooks/issues/90
 
+// RENDER -> PARENT TO CHILD
+// USEEFFECT CLEANUPS -> CHILD TO PARENT
+// USEEFFECT (THE RELATED ONES) -> CHILD TO PARENT
+
 import * as React from 'react'
 
 function Child() {
   console.log('%c    Child: render start', 'color: MediumSpringGreen')
 
   const [count, setCount] = React.useState(() => {
-    console.log('%c    Child: useState(() => 0)', 'color: tomato')
+    console.log(
+      '%c    Child: useState(() => 0) (Lazy initialization)',
+      'color: tomato',
+    )
     return 0
   })
 
@@ -62,9 +69,12 @@ function Child() {
 
 function App() {
   console.log('%cApp: render start', 'color: MediumSpringGreen')
-
+  const [count, setCount] = React.useState(0)
   const [showChild, setShowChild] = React.useState(() => {
-    console.log('%cApp: useState(() => false)', 'color: tomato')
+    console.log(
+      '%cApp: useState(() => false) (Lazy initialization)',
+      'color: tomato',
+    )
     return false
   })
 
@@ -95,8 +105,20 @@ function App() {
     }
   }, [showChild])
 
+  React.useEffect(() => {
+    console.log('%cApp: useEffect(() => {}, [count])', 'color: HotPink')
+    return () => {
+      console.log(
+        '%cApp: useEffect(() => {}, [count]) cleanup 🧹',
+        'color: HotPink',
+      )
+    }
+  }, [count])
+
   const element = (
     <>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>increase</button>
       <label>
         <input
           type="checkbox"
