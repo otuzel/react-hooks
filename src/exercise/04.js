@@ -78,7 +78,7 @@ function Board(props) {
         {renderSquare(8)}
       </div>
       <button className="restart" onClick={restart}>
-        restart
+        Restart
       </button>
     </div>
   )
