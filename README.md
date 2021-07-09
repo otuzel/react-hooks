@@ -36,7 +36,7 @@
 ## System Requirements
 
 - [git][git] v2.13 or greater
-- [NodeJS][node] `^10.13 || 12 || 14 || 15`
+- [NodeJS][node] `12 || 14 || 15 || 16`
 - [npm][npm] v6 or greater
 
 All of these must be available in your `PATH`. To verify things are set up
@@ -135,25 +135,26 @@ The purpose of the exercise is **not** for you to work through all the material.
 It's intended to get your brain thinking about the right questions to ask me as
 _I_ walk through the material.
 
-### Helpful Emoji 🐨 💪 🏁 💰 💯 🦉 📜 💣 👨‍💼 🚨
+### Helpful Emoji 🐨 💰 💯 📝 🦉 📜 💣 💪 🏁 👨‍💼 🚨
 
 Each exercise has comments in it to help you get through the exercise. These fun
 emoji characters are here to help you.
 
 - **Kody the Koala** 🐨 will tell you when there's something specific you should
-  do
-- **Matthew the Muscle** 💪 will indicate what you're working with an exercise
-- **Chuck the Checkered Flag** 🏁 will indicate that you're working with a final
-  version
+  do version
 - **Marty the Money Bag** 💰 will give you specific tips (and sometimes code)
   along the way
 - **Hannah the Hundred** 💯 will give you extra challenges you can do if you
   finish the exercises early.
+- **Nancy the Notepad** 📝 will encourage you to take notes on what you're
+  learning
 - **Olivia the Owl** 🦉 will give you useful tidbits/best practice notes and a
   link for elaboration and feedback.
 - **Dominic the Document** 📜 will give you links to useful documentation
 - **Berry the Bomb** 💣 will be hanging around anywhere you need to blow stuff
   up (delete code)
+- **Matthew the Muscle** 💪 will indicate that you're working with an exercise
+- **Chuck the Checkered Flag** 🏁 will indicate that you're working with a final
 - **Peter the Product Manager** 👨‍💼 helps us know what our users want
 - **Alfred the Alert** 🚨 will occasionally show up in the test failures with
   potential explanations for why the tests are failing.
@@ -214,6 +215,11 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Segebre"><img src="https://avatars3.githubusercontent.com/u/10774915?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Juan Enrique Segebre Zaghmout</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=Segebre" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/johnalexanderferguson/"><img src="https://avatars.githubusercontent.com/u/30883573?v=4?s=100" width="100px;" alt=""/><br /><sub><b>John Alexander Ferguson</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=Alferguson" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://trentschneweis.com"><img src="https://avatars.githubusercontent.com/u/10525549?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Trent Schneweis</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=trentschnee" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/lionheart"><img src="https://avatars.githubusercontent.com/u/38447?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dan Loewenherz</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=dlo" title="Code">💻</a></td>
+    <td align="center"><a href="https://prabhuwali.me/"><img src="https://avatars.githubusercontent.com/u/40115160?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shivaprabhu</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=shivaprabhu" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.jacobparis.com/"><img src="https://avatars.githubusercontent.com/u/5633704?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jacob Paris</b></sub></a><br /><a href="https://github.com/kentcdodds/react-hooks/commits?author=JacobParis" title="Documentation">📖</a></td>
   </tr>
 </table>
 

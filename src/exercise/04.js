@@ -59,7 +59,14 @@ const Game = () => {
   //   () => JSON.parse(localStorage.getItem('tictactoe')) || Array(9).fill(null),
   // )
 
+<<<<<<< HEAD
   const currentSquares = history[activeStep]
+=======
+// eslint-disable-next-line no-unused-vars
+function calculateNextValue(squares) {
+  return squares.filter(Boolean).length % 2 === 0 ? 'X' : 'O'
+}
+>>>>>>> upstream/main
 
   const selectSquare = index => {
     if (calculateWinner(currentSquares) || currentSquares[index]) {
