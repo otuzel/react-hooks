@@ -41,7 +41,7 @@ const Board = props => {
 }
 
 const Game = () => {
-  // Lazy initialization
+  //Lazy initialization
   // const [squares, setSquares] = useLocalStorageState(
   //   'tictactoe',
   //   Array(9).fill(null),
@@ -54,19 +54,15 @@ const Game = () => {
     'tictactoe:activeStep',
     0,
   )
-
+  const currentSquares = history[activeStep]
   // const [squares, setSquares] = React.useState(
   //   () => JSON.parse(localStorage.getItem('tictactoe')) || Array(9).fill(null),
   // )
 
-<<<<<<< HEAD
-  const currentSquares = history[activeStep]
-=======
-// eslint-disable-next-line no-unused-vars
-function calculateNextValue(squares) {
-  return squares.filter(Boolean).length % 2 === 0 ? 'X' : 'O'
-}
->>>>>>> upstream/main
+  // eslint-disable-next-line no-unused-vars
+  function calculateNextValue(squares) {
+    return squares.filter(Boolean).length % 2 === 0 ? 'X' : 'O'
+  }
 
   const selectSquare = index => {
     if (calculateWinner(currentSquares) || currentSquares[index]) {
@@ -101,11 +97,11 @@ function calculateNextValue(squares) {
   }
 
   // eslint-disable-next-line no-unused-vars
-  const calculateNextValue = squares => {
-    const xSquaresCount = squares.filter(r => r === 'X').length
-    const oSquaresCount = squares.filter(r => r === 'O').length
-    return oSquaresCount === xSquaresCount ? 'X' : 'O'
-  }
+  // const calculateNextValue = squares => {
+  //   const xSquaresCount = squares.filter(r => r === 'X').length
+  //   const oSquaresCount = squares.filter(r => r === 'O').length
+  //   return oSquaresCount === xSquaresCount ? 'X' : 'O'
+  // }
 
   // eslint-disable-next-line no-unused-vars
   const calculateWinner = squares => {

@@ -2,7 +2,7 @@
 // http://localhost:3000/isolated/exercise/06.js
 
 import React, {useEffect, useState} from 'react'
-import {isThisTypeNode} from 'typescript'
+import {ErrorBoundary} from 'react-error-boundary'
 
 import {
   PokemonForm,
@@ -49,32 +49,33 @@ function PokemonInfo({pokemonName}) {
   }
 }
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {error: false}
-  }
+// class ErrorBoundary extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {error: false}
+//   }
 
-  static getDerivedStateFromError(error) {
-    return {error}
-  }
+//   static getDerivedStateFromError(error) {
+//     return {error}
+//   }
 
-  render() {
-    const {error} = this.state
-    if (error) {
-      return <this.props.FallbackComponent error={error} />
-    }
+//   render() {
+//     const {error} = this.state
+//     if (error) {
+//       return <this.props.FallbackComponent error={error} />
+//     }
 
-    return this.props.children
-  }
-}
+//     return this.props.children
+//   }
+// }
 
 const FallbackComponent = props => {
-  const {error} = props
+  const {error, resetErrorBoundary} = props
   return (
     <div role="alert">
       There was an error:
       <pre style={{whiteSpace: 'normal'}}>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try Again</button>
     </div>
   )
 }
@@ -91,7 +92,11 @@ function App() {
       <PokemonForm pokemonName={pokemonName} onSubmit={handleSubmit} />
       <hr />
       <div className="pokemon-info">
-        <ErrorBoundary FallbackComponent={FallbackComponent}>
+        <ErrorBoundary
+          FallbackComponent={FallbackComponent}
+          onReset={() => setPokemonName('')}
+          resetKeys={[pokemonName]}
+        >
           <PokemonInfo pokemonName={pokemonName} />
         </ErrorBoundary>
       </div>

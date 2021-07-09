@@ -69,11 +69,7 @@ function Greeting({initialName = ''}) {
 
       <form>
         <label htmlFor="name">Name: </label>
-<<<<<<< HEAD
-        <input onChange={handleChange} id="name" value={name} />
-=======
         <input value={name} onChange={handleChange} id="name" />
->>>>>>> upstream/main
       </form>
       {name ? <strong>Hello {name}</strong> : 'Please type your name'}
     </div>
